@@ -8,9 +8,9 @@ def load_library(file)
   # load the file
   emoticons = YAML.load_file(file)
   # iterate over each english meaning in the file made up of an array of two elements (Eng, Jap)
-  emoticons.each do |meaning, array|
+  emoticons.each do |meaning, emoticons|
     # create empty arrays for English and Japanese emoticons
-    english_emoticons, japanese_emoticons = array
+    english_emoticons, japanese_emoticons = emoticons
     # set keys inside get_meaning hash to Japanese emoticons
     dictionary["get_meaning"][japanese_emoticons] = meaning
     dictionary["get_emoticon"][english_emoticons] = japanese_emoticons
