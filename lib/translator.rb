@@ -13,7 +13,7 @@ def load_library(file)
     english_emoticons = array
     japanese_emoticons = array
     # set keys inside get_meaning hash to Japanese emoticons
-    dictionary["get_meaning"][japanese_emoticons] = word
+    dictionary["get_meaning"][japanese_emoticons] = meaning
     dictionary["get_emoticon"][english_emoticons] = japanese_emoticons
   end
   # return dictionary
