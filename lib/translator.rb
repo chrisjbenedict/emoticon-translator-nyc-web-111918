@@ -40,4 +40,5 @@ def get_english_meaning(file, emoticon)
     english_meaning
   else
     "Sorry, that is not a known emoticon"
+  end
 end
