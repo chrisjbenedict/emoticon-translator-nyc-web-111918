@@ -39,6 +39,6 @@ def get_english_meaning(file, emoticon)
   if english_meaning
     english_meaning
   else
-    "Sorry, that is not a known emoticon"
+    "Sorry, that emoticon was not found"
   end
 end
