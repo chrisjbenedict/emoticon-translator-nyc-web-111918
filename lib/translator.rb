@@ -14,7 +14,7 @@ def load_library(file)
     english_emoticons, japanese_emoticons = emoticons
     # emoticon keys in get_meaning point to meanings
     dictionary["get_meaning"][japanese_emoticons] = meaning
-    # emoticon keys in get_emoticon point to Japanese equivalents 
+    # emoticon keys in get_emoticon point to Japanese equivalents
     dictionary["get_emoticon"][english_emoticons] = japanese_emoticons
   end
   # return dictionary
