@@ -1,18 +1,14 @@
 # require modules here
 require 'yaml'
 
-def load_library(file)
-  # code goes here
-  # return a hash with two keys set to inner hashes
-  dictionary = {"get_meaning" => {}, "get_emoticon" => {}}
-  # load the file
-  emoticons = YAML.load_file(file)
-  # iterate over each english meaning in the file made up of an array of two elements (Eng, Jap)
-  emoticons.each do |meaning, array|
-    dictionary["get_meaning"] = array[0]
+def load_library(file_path)
+  library = {"get_meaning" => {}, "get_emoticon" => {} }
+  YAML.load_file(file_path).each do |meaning, array|
+    english, japanese = array
+    library["get_emoticon"][english] = japanese
+    library["get_meaning"][japanese] = meaning
   end
-  # return dictionary
-  dictionary
+  library
 end
 
 def get_japanese_emoticon
